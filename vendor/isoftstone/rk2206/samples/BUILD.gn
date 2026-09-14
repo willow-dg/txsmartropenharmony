@@ -45,12 +45,12 @@ lite_component("app") {
         # "./b13_wifi_tcp:wifi_tcp_example",
         # "./b14_wifi_ap_tcp_server:wifi_AP_tcp_server" ,
         # "./b15_wifi_ap_udp_server:wifi_AP_udp_server" ,
-        # "./b16_wifi_pair:wifi_pair" ,
+         "./b16_wifi_pair:wifi_pair" ,
         # "./b17_watchdog:watchdog_example",
         # "./b18_reboot:reboot_example",
 
         # 基础设备类
-        # "./c1_gas_sensor:gas_sensor_example",
+         "./c1_gas_sensor:gas_sensor_example",
         # "./c2_lcd:lcd_example",
         # "./c3_eeprom:eeprom_example",
         # "./c4_nfc:nfc_example",
@@ -64,7 +64,7 @@ lite_component("app") {
 
         # Iot综合实验类
         # "./e1_iot_smart_home:iot_smart_home_example",
-        "./e1_iot_smart_home_hwiot:iot_smart_home_example",
+        #"./e1_iot_smart_home_hwiot:iot_smart_home_example",
         # "./e2_iot_smart_security:iot_smart_security_example",
     ]
 

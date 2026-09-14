@@ -37,8 +37,8 @@
 
 #define BUFF_LEN           256
 
-#define ROUTE_SSID "MY_SW"
-#define ROUTE_PASSWORD "12345678"
+#define ROUTE_SSID ""
+#define ROUTE_PASSWORD ""
 
 WifiLinkedInfo wifiinfo;
 

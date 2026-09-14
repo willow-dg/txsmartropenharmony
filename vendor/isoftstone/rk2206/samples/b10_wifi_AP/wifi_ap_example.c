@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-#define AP_SSID     "MY_AP"
+#define AP_SSID     "bigGirls"
 #define AP_PWD      "12345678"
 
 void wifi_ap_mode(void *args)

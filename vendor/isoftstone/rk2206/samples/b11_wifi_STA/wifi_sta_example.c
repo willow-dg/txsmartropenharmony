@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 
-#define ROUTE_SSID      "MY_SW"
+#define ROUTE_SSID      "bigGirls"
 #define ROUTE_PASSWORD  "12345678"
 
 void wifi_sta_mode(void *args)

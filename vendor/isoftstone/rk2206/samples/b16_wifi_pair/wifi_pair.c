@@ -168,7 +168,7 @@ int wifi_udp_server(void* arg)
 int AP_task(WifiLinkedInfo *info)
 {
     printf(">>start ap mode!\n");
-    set_wifi_config_ssid(printf, "MY_AP");
+    set_wifi_config_ssid(printf, "WILLOW_AP");
     set_wifi_config_passwd(printf, "12345678");
     set_wifi_config_mode(printf, "AP");
     SetApModeOn();
@@ -209,7 +209,6 @@ void wifi_pair_example(void)
     unsigned int thread_id;
     TSK_INIT_PARAM_S task = {0};
     printf("%s start ....\n", __FUNCTION__);
-
     task.pfnTaskEntry = (TSK_ENTRY_FUNC)key_process;
     task.uwStackSize = 10240;
     task.pcName = "key_process";
@@ -249,6 +248,6 @@ void wifi_pair_example(void)
     }
 
 }
-
+// 把入口挂到 OpenHarmony 启动表
 APP_FEATURE_INIT(wifi_pair_example);
 

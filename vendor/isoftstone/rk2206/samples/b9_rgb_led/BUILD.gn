@@ -14,8 +14,8 @@
 
 static_library("rgb_led_example") {
     sources = [
-        "ambient_lighting_example.c",
-        # "rgb_led_example.c" ,
+        #"ambient_lighting_example.c",
+         "rgb_led_example.c" ,
 
     ]
 
