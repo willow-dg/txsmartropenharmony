@@ -15,7 +15,9 @@ import("//build/lite/config/component/lite_component.gni")
 
 lite_component("app") {
     features = [
-    
+        # 项目
+        "yadx_life_line:yadx1_example",
+
         # 内核类
         # "a1_kernel_task:task_example",
         # "./a2_kernel_semaphore:semaphore_example",
@@ -45,12 +47,12 @@ lite_component("app") {
         # "./b13_wifi_tcp:wifi_tcp_example",
         # "./b14_wifi_ap_tcp_server:wifi_AP_tcp_server" ,
         # "./b15_wifi_ap_udp_server:wifi_AP_udp_server" ,
-         "./b16_wifi_pair:wifi_pair" ,
+        # "./b16_wifi_pair:wifi_pair" ,
         # "./b17_watchdog:watchdog_example",
         # "./b18_reboot:reboot_example",
 
         # 基础设备类
-         "./c1_gas_sensor:gas_sensor_example",
+        # "./c1_gas_sensor:gas_sensor_example",
         # "./c2_lcd:lcd_example",
         # "./c3_eeprom:eeprom_example",
         # "./c4_nfc:nfc_example",
