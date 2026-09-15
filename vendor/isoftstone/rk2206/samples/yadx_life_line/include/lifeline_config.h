@@ -23,8 +23,8 @@
 #define NODE_SCENE          "gas,drain,bridge,tunnel"
 
 /* WiFi */
-#define ROUTE_SSID          "HONOR 500"
-#define ROUTE_PASSWORD      "2dqjtggmipq7494"
+#define ROUTE_SSID          "bigGirls"
+#define ROUTE_PASSWORD      "12345678"
 
 /*
  * 华为云 IoTDA（华北-北京四 / 标准版实例，不要再开通已停售的基础版）

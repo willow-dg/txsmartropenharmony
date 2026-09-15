@@ -79,6 +79,8 @@ void lcd_process(void *arg)
         lcd_show_string(0, 70, "Welcome to TX-SMART-R!", LCD_RED, LCD_WHITE, 16, 0);
         lcd_show_string(0, 88, "URL: https://www.issedu.com/", LCD_RED, LCD_WHITE, 16, 0);
         lcd_show_chinese(0, 108,"开源鸿蒙" , LCD_RED, LCD_GRAY, 32, 0);
+        lcd_show_chinese(LCD_W - 32 * 2 - 4, 4,"你好" , LCD_RED, LCD_GRAY, 32, 0);
+        lcd_show_chinese(LCD_W - 24 * 4 - 4, LCD_H - 24 - 4,"延安大学", LCD_BLUE, LCD_WHITE, 24, 0);
         lcd_show_string(0, 160, "LCD_W:", LCD_BLUE, LCD_WHITE, 16, 0);
         lcd_show_int_num(48, 160, LCD_W, 3, LCD_BLUE, LCD_WHITE, 16);
         lcd_show_string(80, 160, "LCD_H:", LCD_BLUE, LCD_WHITE, 16, 0);
@@ -90,12 +92,13 @@ void lcd_process(void *arg)
 
         lcd_fill(0, 220, LCD_W, LCD_H, LCD_WHITE);
         lcd_show_chinese(0, 220, chinese_string, LCD_RED, LCD_GRAYBLUE, cur_sizey, 0);
+        lcd_show_chinese(LCD_W - 24 * 4 - 4, LCD_H - 24 - 4,"延安大学", LCD_BLUE, LCD_WHITE, 24, 0);
         if (cur_sizey == 12)
             cur_sizey = 16;
-        else if(cur_sizey == 16)
-            cur_sizey = 24;
-        else if(cur_sizey == 24)
-            cur_sizey = 32;
+        // else if(cur_sizey == 16)
+        //     cur_sizey = 24;
+        // else if(cur_sizey == 24)
+        //     cur_sizey = 32;
         else
             cur_sizey = 12;
 
