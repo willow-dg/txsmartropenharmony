@@ -26,11 +26,11 @@
 #include "smart_home_event.h"
 
 
-#define HOST_ADDR "bf4c40ad8d.st1.iotda-device.cn-north-4.myhuaweicloud.com"
+#define HOST_ADDR "fce240838b.st1.iotda-device.cn-north-4.myhuaweicloud.com"
 
-#define CLIENT_ID "68ab30d9d582f200184897ea_test001_0_0_2025082415"
-#define DEVICE_ID  "68ab30d9d582f200184897ea_test001"
-#define MQTT_DEVICES_PWD "693e5aa4ca37ac2c8f42a90f48c9a5d70e35136140b652fff774adc7ee2daf1a"
+#define CLIENT_ID "6aab50757f2e6c302f9a265e_rk2206_0_0_2026091703"
+#define DEVICE_ID  "6aab50757f2e6c302f9a265e_rk2206"
+#define MQTT_DEVICES_PWD "3149b0b9c48223ac3480a949da91b749941a5c0fb233cb4e0216c80ad449f3c0"
 
 #define PUBLISH_TOPIC "$oc/devices/" DEVICE_ID "/sys/properties/report"
 #define SUBCRIB_TOPIC                                                          \

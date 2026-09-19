@@ -34,10 +34,12 @@
 #define BUFFER_LEN                                      50
 
 
+// volatile 防止读的时候写，写的时候读，造成数据不一致
 
 extern bool motor_state;
 extern bool light_state;
 extern bool auto_state;
+
 extern unsigned int m_su03_msg_queue;
 
 /***************************************************************
@@ -56,11 +58,11 @@ static void su_03t_thread(void *arg)
     
     attr.baudRate = 115200;
     attr.dataBits = IOT_UART_DATA_BIT_8;
-    attr.pad = IOT_FLOW_CTRL_NONE;
-    attr.parity = IOT_UART_PARITY_NONE;
-    attr.rxBlock = IOT_UART_BLOCK_STATE_BLOCK;
-    attr.stopBits = IOT_UART_STOP_BIT_1;
-    attr.txBlock = IOT_UART_BLOCK_STATE_NONE_BLOCK;
+    attr.pad = IOT_FLOW_CTRL_NONE;//无流控
+    attr.parity = IOT_UART_PARITY_NONE;//未校验
+    attr.rxBlock = IOT_UART_BLOCK_STATE_BLOCK;//阻塞读
+    attr.stopBits = IOT_UART_STOP_BIT_1;//1位停止位
+    attr.txBlock = IOT_UART_BLOCK_STATE_NONE_BLOCK;//非阻塞写
     
     ret = IoTUartInit(UART2_HANDLE, &attr);
     if (ret != IOT_SUCCESS)
@@ -165,7 +167,7 @@ void su03t_send_double_msg(uint8_t index, double dat)
 * 参    数: 无
 * 返 回 值: 无
 ***************************************************************/
-void su03t_init(void)
+void su03t_init(void)/*线程初始化*/
 {
     unsigned int thread_id;
     TSK_INIT_PARAM_S task = {0};

@@ -28,7 +28,7 @@
 #include "picture.h"
 #include "adc_key.h"
 
-#define ROUTE_SSID      "MY_SW"          // WiFi账号
+#define ROUTE_SSID      "bigGirls"          // WiFi账号
 #define ROUTE_PASSWORD "12345678"       // WiFi密码
 
 #define MSG_QUEUE_LENGTH                                16

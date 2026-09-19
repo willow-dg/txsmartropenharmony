@@ -17,6 +17,7 @@ lite_component("app") {
     features = [
         # 项目
         # "yadx_life_line:yadx1_example",
+         "./project_no3:yadx1_example",
 
         # 内核类
         # "a1_kernel_task:task_example",
@@ -53,7 +54,7 @@ lite_component("app") {
 
         # 基础设备类
         # "./c1_gas_sensor:gas_sensor_example",
-         "./c2_lcd:lcd_example",
+        # "./c2_lcd:lcd_example",
         # "./c3_eeprom:eeprom_example",
         # "./c4_nfc:nfc_example",
         # "./c5_sht30:sht30_example",
@@ -66,7 +67,7 @@ lite_component("app") {
 
         # Iot综合实验类
         # "./e1_iot_smart_home:iot_smart_home_example",
-        #"./e1_iot_smart_home_hwiot:iot_smart_home_example",
+        # "./e1_iot_smart_home_hwiot:iot_smart_home_example",
         # "./e2_iot_smart_security:iot_smart_security_example",
     ]
 

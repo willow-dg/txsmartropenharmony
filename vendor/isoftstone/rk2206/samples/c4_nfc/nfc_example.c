@@ -43,6 +43,7 @@ void nfc_process(void)
         printf("NFC Write Url Failed: %d\n", ret);
     }
     
+    // 串口输出
     while (1) {
         printf("==============NFC Example==============\r\n");
         printf("Please use the mobile phone with NFC function close to the development board!\r\n");
