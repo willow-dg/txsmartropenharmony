@@ -1,0 +1,54 @@
+# Copyright (c)  2024 iSoftStone Education Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+
+static_library("yadx1_example") {
+    sources = [
+        "yadx1_example.c",
+        "src/mq2.c",
+        "src/mpu6050.c",
+        "src/sht30.c",
+        "src/bh1750.c",
+        "src/lifeline_sensors.c",
+        "src/lifeline_alarm.c",
+        "src/lifeline_iot.c",
+        "src/lifeline_sntp.c",
+        "src/lifeline_wifi.c",
+        "src/wifi_store.c",
+        "src/lifeline_ui.c",
+        "src/lifeline_nfc.c",
+        "src/su_03t.c",
+        "src/lcd.c",
+        "src/ndef.c",
+        "src/nfc.c",
+        "src/nfcForum.c",
+        "src/NT3H.c",
+        "src/rtdText.c",
+        "src/rtdUri.c",
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "include",
+        "src",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//device/rockchip/rk2206/adapter/include",
+        "//device/rockchip/rk2206/sdk_liteos/board/include",
+        "//device/rockchip/hardware/lib/hal/inc",
+        "//device/rockchip/hardware/lib/CMSIS/Device/RK2206/Include/",
+        "//third_party/cJSON",
+        "//third_party/musl/porting/liteos_m/kernel/include",
+        "//third_party/paho_mqtt/MQTTPacket/src",
+        "//third_party/paho_mqtt/MQTTClient-C/src",
+        "//third_party/mbedtls/include",
+    ]
+
+    defines = [
+        "__unix__",
+        "MBEDTLS_CONFIG_FILE=<../port/config/config_liteos_m.h>",
+    ]
+
+    deps = [
+        "//device/rockchip/hardware:hardware",
+        "//third_party/mbedtls:mbedtls_static",
+    ]
+}

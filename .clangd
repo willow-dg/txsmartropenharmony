@@ -1,0 +1,26 @@
+# clangd config for isoftstone-rk2206 (liteos_m / arm-none-eabi-gcc)
+# Requires compile_commands.json at the repo root:
+#   python3 vendor/isoftstone/rk2206/scripts/gen_compile_commands.py
+
+CompileFlags:
+  CompilationDatabase: .
+  Add:
+    - --target=arm-none-eabi
+    - -mcpu=cortex-m4
+    - -mthumb
+    - -D__LITEOS__
+    - -D__LITEOS_M__
+    - -isystem
+    - /home/tools/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include
+    - -isystem
+    - /home/tools/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed
+    - -isystem
+    - /home/tools/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include
+
+Index:
+  Background: Build
+  StandardLibrary: Yes
+
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: None
